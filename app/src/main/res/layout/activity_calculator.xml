@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    ScrollView permite recorrer la pantalla cuando aparece
+    el teclado o cuando el contenido no cabe completamente.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_principal"
+    android:fillViewport="true">
+
+    <!--
+        LinearLayout organiza todo el formulario verticalmente.
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingTop="25dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="30dp">
+
+
+        <!-- ===== LOGO COMO BOTÓN DE INICIO ===== -->
+
+        <ImageButton
+            android:id="@+id/imgLogoCalculadora"
+            android:layout_width="270dp"
+            android:layout_height="105dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Regresar al inicio"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_umb" />
+
+
+        <!-- ===== NOMBRE DE LA OPERACIÓN ===== -->
+
+        <!--
+            Este TextView cambiará su contenido desde Kotlin.
+
+            Puede mostrar Suma, Resta, Multiplicación o División.
+        -->
+
+        <TextView
+            android:id="@+id/txtNombreOperacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Suma"
+            android:textColor="@color/vinotinto"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+
+        <!-- ===== SÍMBOLO DE LA OPERACIÓN ===== -->
+
+        <!--
+            Este TextView muestra +, −, × o ÷.
+
+            También se actualiza desde CalculatorActivity.kt.
+        -->
+
+        <TextView
+            android:id="@+id/txtSimboloOperacion"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/fondo_operacion"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="@color/blanco"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+
+
+        <!-- ===== ETIQUETA DEL PRIMER NÚMERO ===== -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/primer_numero"
+            android:textColor="@color/gris_oscuro"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <!-- ===== CAMPO DEL PRIMER NÚMERO ===== -->
+
+        <!--
+            EditText permite que el usuario escriba información.
+
+            inputType configura el teclado para aceptar
+            números decimales y negativos.
+
+            singleLine evita que el usuario cree varias líneas.
+        -->
+
+        <EditText
+            android:id="@+id/edtPrimerNumero"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/fondo_resultado"
+            android:hint="@string/ingrese_numero"
+            android:inputType="numberDecimal|numberSigned"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:singleLine="true"
+            android:textColor="@color/gris_oscuro"
+            android:textColorHint="@color/gris_texto"
+            android:textSize="18sp" />
+
+
+        <!-- ===== ETIQUETA DEL SEGUNDO NÚMERO ===== -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/segundo_numero"
+            android:textColor="@color/gris_oscuro"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <!-- ===== CAMPO DEL SEGUNDO NÚMERO ===== -->
+
+        <EditText
+            android:id="@+id/edtSegundoNumero"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/fondo_resultado"
+            android:hint="@string/ingrese_numero"
+            android:inputType="numberDecimal|numberSigned"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:singleLine="true"
+            android:textColor="@color/gris_oscuro"
+            android:textColorHint="@color/gris_texto"
+            android:textSize="18sp" />
+
+
+        <!-- ===== BOTÓN CALCULAR ===== -->
+
+        <!--
+            Al presionarlo se ejecutará realizarCalculo()
+            en CalculatorActivity.kt.
+        -->
+
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/fondo_boton"
+            android:text="@string/calcular"
+            android:textAllCaps="false"
+            android:textColor="@color/blanco"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <!-- ===== ETIQUETA RESULTADO ===== -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/resultado"
+            android:textColor="@color/gris_oscuro"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <!-- ===== CUADRO DONDE APARECE EL RESULTADO ===== -->
+
+        <!--
+            Kotlin modificará el texto de este componente
+            después de realizar la operación matemática.
+        -->
+
+        <TextView
+            android:id="@+id/txtResultado"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/fondo_resultado"
+            android:gravity="center"
+            android:text="@string/resultado_inicial"
+            android:textColor="@color/rojo_oscuro"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+
+        <!-- ===== BOTÓN LIMPIAR ===== -->
+
+        <!--
+            Vacía los dos campos y reinicia el resultado.
+        -->
+
+        <Button
+            android:id="@+id/btnLimpiar"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/fondo_boton_oscuro"
+            android:text="@string/limpiar"
+            android:textAllCaps="false"
+            android:textColor="@color/blanco"
+            android:textSize="16sp" />
+
+
+        <!-- ===== BOTÓN VOLVER A OPERACIONES ===== -->
+
+        <!--
+            Cierra CalculatorActivity y muestra nuevamente
+            la selección de operaciones.
+        -->
+
+        <Button
+            android:id="@+id/btnVolverOperaciones"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/fondo_boton_oscuro"
+            android:text="@string/volver_operaciones"
+            android:textAllCaps="false"
+            android:textColor="@color/blanco"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</ScrollView>

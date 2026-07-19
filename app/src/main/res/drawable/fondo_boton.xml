@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    selector permite cambiar el aspecto del botón
+    dependiendo de su estado.
+-->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- ===== BOTÓN CUANDO EL USUARIO LO PRESIONA ===== -->
+
+    <item android:state_pressed="true">
+
+        <!-- shape crea la forma del botón -->
+        <shape android:shape="rectangle">
+
+            <!-- solid coloca un color uniforme -->
+            <solid android:color="@color/vinotinto" />
+
+            <!-- corners redondea las esquinas -->
+            <corners android:radius="12dp" />
+
+            <!-- padding crea espacio interno -->
+            <padding
+                android:left="16dp"
+                android:top="12dp"
+                android:right="16dp"
+                android:bottom="12dp" />
+
+        </shape>
+
+    </item>
+
+
+    <!-- ===== APARIENCIA NORMAL DEL BOTÓN ===== -->
+
+    <item>
+
+        <shape android:shape="rectangle">
+
+            <!-- Degradado horizontal entre rojo y vinotinto -->
+            <gradient
+                android:angle="0"
+                android:startColor="@color/rojo_principal"
+                android:endColor="@color/rojo_oscuro" />
+
+            <!-- Esquinas redondeadas -->
+            <corners android:radius="12dp" />
+
+            <!-- Espacio entre el texto y los bordes -->
+            <padding
+                android:left="16dp"
+                android:top="12dp"
+                android:right="16dp"
+                android:bottom="12dp" />
+
+        </shape>
+
+    </item>
+
+</selector>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    ScrollView permite desplazar verticalmente el contenido.
+    Es útil para evitar que los elementos queden cortados
+    en celulares con pantallas pequeñas.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_principal"
+    android:fillViewport="true">
+
+    <!--
+        LinearLayout organiza los elementos uno después de otro.
+
+        orientation="vertical" coloca los elementos de arriba hacia abajo.
+
+        gravity="center_horizontal" centra los elementos horizontalmente.
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="28dp"
+        android:paddingTop="40dp"
+        android:paddingRight="28dp"
+        android:paddingBottom="30dp">
+
+
+        <!-- ===== LOGO DE LA UNIVERSIDAD ===== -->
+
+        <!--
+            ImageButton muestra una imagen que también funciona como botón.
+
+            scaleType="fitCenter" ajusta la imagen sin deformarla.
+
+            background transparente elimina el fondo tradicional del botón.
+        -->
+
+        <ImageButton
+            android:id="@+id/imgLogoInicio"
+            android:layout_width="300dp"
+            android:layout_height="130dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Logo Universidad Manuela Beltrán"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_umb" />
+
+
+        <!-- ===== TÍTULO PRINCIPAL ===== -->
+
+        <!--
+            TextView sirve para mostrar textos que el usuario
+            normalmente no necesita modificar.
+        -->
+
+        <TextView
+            android:id="@+id/txtTituloPrincipal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            android:text="@string/titulo_calculadora"
+            android:textColor="@color/vinotinto"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+        <!-- ===== SUBTÍTULO ===== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/subtitulo_aplicacion"
+            android:textColor="@color/gris_texto"
+            android:textSize="16sp" />
+
+
+        <!-- ===== LÍNEA DECORATIVA ===== -->
+
+        <!--
+            View es un componente vacío.
+            Aquí se utiliza como una pequeña línea decorativa.
+        -->
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/rojo_principal" />
+
+
+        <!-- ===== BOTÓN PARA ABRIR LAS OPERACIONES ===== -->
+
+        <!--
+            Button crea un botón que puede detectar clics.
+            El evento del clic se programa en MainActivity.kt.
+        -->
+
+        <Button
+            android:id="@+id/btnOperaciones"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/fondo_boton"
+            android:text="@string/boton_operaciones"
+            android:textAllCaps="false"
+            android:textColor="@color/blanco"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <!-- ===== BOTÓN ACERCA DE ===== -->
+
+        <Button
+            android:id="@+id/btnAcercaDe"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/fondo_boton_oscuro"
+            android:text="@string/boton_acerca_de"
+            android:textAllCaps="false"
+            android:textColor="@color/blanco"
+            android:textSize="18sp" />
+
+
+        <!-- ===== INFORMACIÓN ACADÉMICA ===== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:gravity="center"
+            android:text="@string/actividad_modulo"
+            android:textColor="@color/rojo_oscuro"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <!-- ===== NOMBRE DE LA UNIVERSIDAD ===== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Universidad Manuela Beltrán"
+            android:textColor="@color/gris_texto"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</ScrollView>

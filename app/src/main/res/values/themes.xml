@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- ___ TEMA PRINCIPAL DE LA APLICACIÓN ___ -->
+
+    <style
+        name="Theme.CalculadoraUMB"
+        parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="colorPrimary">@color/rojo_principal</item>
+        <item name="colorPrimaryVariant">@color/rojo_oscuro</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+
+        <item name="colorSecondary">@color/vinotinto</item>
+        <item name="colorOnSecondary">@color/blanco</item>
+
+        <item name="android:statusBarColor">@color/rojo_oscuro</item>
+        <item name="android:navigationBarColor">@color/vinotinto</item>
+
+    </style>
+
+</resources>

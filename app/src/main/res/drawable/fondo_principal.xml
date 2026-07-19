@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    shape permite crear una figura mediante XML.
+    En este caso se crea un rectángulo que funcionará como fondo.
+-->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!--
+        gradient crea una transición entre varios colores.
+        Esto evita que el fondo sea completamente plano.
+    -->
+
+    <gradient
+        android:angle="270"
+        android:startColor="#FFFFFF"
+        android:centerColor="#F8F5F5"
+        android:endColor="#F1E8E8" />
+
+</shape>

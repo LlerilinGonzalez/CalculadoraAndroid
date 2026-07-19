@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- ===== COLORES PRINCIPALES DE LA UNIVERSIDAD ===== -->
+
+    <!-- Rojo usado en botones, líneas y elementos principales -->
+    <color name="rojo_principal">#9E1111</color>
+
+    <!-- Rojo cercano al color institucional del logo -->
+    <color name="rojo_umb">#B00014</color>
+
+    <!-- Rojo oscuro usado en barras, textos y degradados -->
+    <color name="rojo_oscuro">#6E1111</color>
+
+    <!-- Vinotinto usado para generar contraste -->
+    <color name="vinotinto">#4A1717</color>
+
+    <!-- Variante más clara del vinotinto -->
+    <color name="vinotinto_claro">#752020</color>
+
+
+    <!-- ===== COLORES GENERALES DE LA INTERFAZ ===== -->
+
+    <!-- Color principal para textos oscuros -->
+    <color name="gris_oscuro">#292929</color>
+
+    <!-- Color para textos secundarios -->
+    <color name="gris_texto">#555555</color>
+
+    <!-- Color usado en algunos bordes -->
+    <color name="gris_borde">#D4D4D4</color>
+
+    <!-- Fondo claro de la aplicación -->
+    <color name="fondo_claro">#F8F5F5</color>
+
+    <!-- Blanco para textos sobre botones -->
+    <color name="blanco">#FFFFFF</color>
+
+    <!-- Negro disponible para textos o elementos -->
+    <color name="negro">#000000</color>
+
+</resources>

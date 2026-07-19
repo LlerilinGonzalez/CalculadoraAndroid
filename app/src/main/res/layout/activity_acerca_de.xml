@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    ScrollView permite desplazarse si la información
+    no cabe completamente en la pantalla.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_principal"
+    android:fillViewport="true">
+
+    <!--
+        LinearLayout organiza verticalmente el logo,
+        descripción, integrantes y botón.
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="28dp"
+        android:paddingTop="30dp"
+        android:paddingRight="28dp"
+        android:paddingBottom="30dp">
+
+
+        <!-- ===== LOGO COMO BOTÓN DE INICIO ===== -->
+
+        <ImageButton
+            android:id="@+id/imgLogoAcercaDe"
+            android:layout_width="285dp"
+            android:layout_height="115dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Regresar al inicio"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_umb" />
+
+
+        <!-- ===== TÍTULO DE LA SECCIÓN ===== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="@string/titulo_acerca_de"
+            android:textColor="@color/vinotinto"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+
+        <!-- ===== LÍNEA DECORATIVA ===== -->
+
+        <View
+            android:layout_width="90dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="14dp"
+            android:background="@color/rojo_principal" />
+
+
+        <!-- ===== DESCRIPCIÓN DE LA ACTIVIDAD ===== -->
+
+        <!--
+            Este TextView utiliza fondo_resultado.xml
+            para verse como una tarjeta informativa.
+        -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/fondo_resultado"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:padding="20dp"
+            android:text="@string/descripcion_aplicacion"
+            android:textColor="@color/gris_oscuro"
+            android:textSize="16sp" />
+
+
+        <!-- ===== TÍTULO DE DESARROLLADORES ===== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/titulo_desarrolladores"
+            android:textColor="@color/rojo_oscuro"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+
+        <!-- ===== PRIMER INTEGRANTE ===== -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:text="@string/integrante_1"
+            android:textColor="@color/gris_oscuro"
+            android:textSize="16sp" />
+
+
+        <!-- ===== SEGUNDO INTEGRANTE ===== -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/integrante_2"
+            android:textColor="@color/gris_oscuro"
+            android:textSize="16sp" />
+
+
+        <!-- ===== TERCER INTEGRANTE ===== -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/integrante_3"
+            android:textColor="@color/gris_oscuro"
+            android:textSize="16sp" />
+
+
+        <!-- ===== VERSIÓN DE LA APLICACIÓN ===== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="@string/version_aplicacion"
+            android:textColor="@color/gris_texto"
+            android:textSize="14sp" />
+
+
+        <!-- ===== BOTÓN PARA VOLVER AL INICIO ===== -->
+
+        <Button
+            android:id="@+id/btnVolverInicioAcercaDe"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/fondo_boton"
+            android:text="@string/volver_inicio"
+            android:textAllCaps="false"
+            android:textColor="@color/blanco"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>

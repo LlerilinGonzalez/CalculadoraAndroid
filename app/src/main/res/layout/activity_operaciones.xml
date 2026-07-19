@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    ScrollView permite desplazarse verticalmente si la pantalla
+    del dispositivo no puede mostrar todo el contenido.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_principal"
+    android:fillViewport="true">
+
+    <!--
+        LinearLayout principal organiza todos los elementos
+        verticalmente, desde el logo hasta el botón de regreso.
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingTop="30dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="30dp">
+
+
+        <!-- ===== LOGO CLICABLE ===== -->
+
+        <!--
+            ImageButton permite mostrar el logo y detectar clics.
+            Al tocarlo se regresará a MainActivity.
+        -->
+
+        <ImageButton
+            android:id="@+id/imgLogoOperaciones"
+            android:layout_width="280dp"
+            android:layout_height="115dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Regresar al inicio"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_umb" />
+
+
+        <!-- ===== TÍTULO DE LA PANTALLA ===== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:gravity="center"
+            android:text="@string/titulo_operaciones"
+            android:textColor="@color/vinotinto"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+        <!-- ===== INSTRUCCIÓN PARA EL USUARIO ===== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="Seleccione la operación matemática que desea realizar"
+            android:textColor="@color/gris_texto"
+            android:textSize="15sp" />
+
+
+        <!-- ===== PRIMERA FILA DE OPERACIONES ===== -->
+
+        <!--
+            Este LinearLayout tiene orientación horizontal.
+
+            Por eso los botones de suma y resta
+            aparecerán uno al lado del otro.
+        -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <!-- ===== BOTÓN SUMA ===== -->
+
+            <!--
+                layout_width="0dp" y layout_weight="1"
+                hacen que el botón ocupe la mitad del espacio disponible.
+            -->
+
+            <Button
+                android:id="@+id/btnSuma"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/fondo_operacion"
+                android:text="+&#10;Suma"
+                android:textAllCaps="false"
+                android:textColor="@color/blanco"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+
+            <!-- ===== BOTÓN RESTA ===== -->
+
+            <Button
+                android:id="@+id/btnResta"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/fondo_operacion"
+                android:text="−&#10;Resta"
+                android:textAllCaps="false"
+                android:textColor="@color/blanco"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <!-- ===== SEGUNDA FILA DE OPERACIONES ===== -->
+
+        <!--
+            Este LinearLayout contiene multiplicación y división.
+        -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <!-- ===== BOTÓN MULTIPLICACIÓN ===== -->
+
+            <Button
+                android:id="@+id/btnMultiplicacion"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/fondo_operacion"
+                android:text="×&#10;Multiplicación"
+                android:textAllCaps="false"
+                android:textColor="@color/blanco"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <!-- ===== BOTÓN DIVISIÓN ===== -->
+
+            <Button
+                android:id="@+id/btnDivision"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/fondo_operacion"
+                android:text="÷&#10;División"
+                android:textAllCaps="false"
+                android:textColor="@color/blanco"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <!-- ===== BOTÓN PARA VOLVER AL INICIO ===== -->
+
+        <Button
+            android:id="@+id/btnVolverInicioOperaciones"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/fondo_boton_oscuro"
+            android:text="@string/volver_inicio"
+            android:textAllCaps="false"
+            android:textColor="@color/blanco"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</ScrollView>

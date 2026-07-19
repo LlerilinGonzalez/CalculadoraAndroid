@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- ___ CONFIGURACIÓN DEL TEMA PARA API 23 O SUPERIOR ___ -->
+
+    <style
+        name="Theme.CalculadoraUMB"
+        parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="colorPrimary">@color/rojo_principal</item>
+        <item name="colorPrimaryVariant">@color/rojo_oscuro</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+
+        <item name="colorSecondary">@color/vinotinto</item>
+        <item name="colorOnSecondary">@color/blanco</item>
+
+        <item name="android:statusBarColor">@color/rojo_oscuro</item>
+        <item name="android:navigationBarColor">@color/vinotinto</item>
+
+        <!-- Hace que los iconos de la barra superior sean claros -->
+        <item name="android:windowLightStatusBar">false</item>
+
+    </style>
+
+</resources>

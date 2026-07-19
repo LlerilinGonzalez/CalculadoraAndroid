@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    manifest es el archivo que describe la estructura
+    general de la aplicación para el sistema Android.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        application contiene la configuración general
+        de toda la aplicación.
+    -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CalculadoraUMB">
+
+
+        <!-- ===== ACTIVIDAD ACERCA DE ===== -->
+
+        <!--
+            exported="false" significa que esta actividad
+            solo se abre desde la propia aplicación.
+        -->
+
+        <activity
+            android:name=".AcercaDeActivity"
+            android:exported="false" />
+
+
+        <!-- ===== ACTIVIDAD DE LA CALCULADORA ===== -->
+
+        <activity
+            android:name=".CalculatorActivity"
+            android:exported="false" />
+
+
+        <!-- ===== ACTIVIDAD DE OPERACIONES ===== -->
+
+        <activity
+            android:name=".OperacionesActivity"
+            android:exported="false" />
+
+
+        <!-- ===== ACTIVIDAD PRINCIPAL ===== -->
+
+        <!--
+            exported="true" permite que Android pueda iniciar
+            esta actividad desde el ícono de la aplicación.
+        -->
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+
+            <!--
+                intent-filter indica que MainActivity
+                será el punto de entrada de la aplicación.
+            -->
+
+            <intent-filter>
+
+                <!-- MAIN indica que es la actividad inicial -->
+                <action android:name="android.intent.action.MAIN" />
+
+                <!--
+                    LAUNCHER hace que aparezca en el menú
+                    de aplicaciones del dispositivo.
+                -->
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+
+        </activity>
+
+    </application>
+
+</manifest>
